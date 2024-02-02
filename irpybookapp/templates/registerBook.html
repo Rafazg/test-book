@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/registerBook.css">
+    <title>Registrar seu livro</title>
+    <link rel="shortcut icon" type="imagex/png" href="../static/img/IconLogo.png">
+</head>
+<body>
+    <header>
+        <div class="main-container">
+            <div class="logo-container">
+                <a href="{% url 'home' %}"><img class="logo" src="../static/img/Logo.png" alt="logo"></a>
+            </div>
+        </div>
+        <div class="titulo-container">
+            <h1>Registre seu Livro</h1>
+        </div>
+    </header>
+
+    <main>
+        <form action="{% url 'registerBook' %}" method="post">
+            {% csrf_token %}
+            <div class="inputs-container">
+                <div class="primeiro-input">
+                    <h3>Titulo</h3>
+                    {{ form.titulo }}
+                </div>
+    
+                <div class="segundo-input">
+                    <h3>Autor</h3>
+                    {{ form.autor }}
+                </div>
+    
+                <div class="terceiro-input">
+                    <h3>Data de Registro</h3>
+                    {{ form.data }}
+                </div>
+    
+                <div class="quarto-input">
+                    <h3>Sinopse</h3>
+                    {{ form.sinopse }}
+                </div>
+            </div>
+
+            <div class="btn-register">
+                <button type="submit">Registrar Livro</button>
+            </div>
+        </form>
+        
+    </main>
+
+
+</body>
+</html>

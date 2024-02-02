@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../static/css/login.css">
+    <title>IRPyBook - Login</title>
+    <link rel="shortcut icon" type="imagex/png" href="../static/img/IconLogo.png">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo-container">
+            <img class="logo" src="../static/img/Logo.png" alt="logo">
+        </div>
+
+        <div class="inputs-container">
+            <h1 class="titulo-container">Login</h1>
+            <form action="{% url 'login' %}" method="post" class="form-container">
+                {% csrf_token %}
+                
+                <div class="email-container">
+                    <img class="icon-email" src="{% static 'img/user.png' %}">
+                    <input type="text" name="username" id="username-input" placeholder="Usuario">
+                </div>
+                <div class="senha-container">
+                    <img class="icon-senha" src="{% static 'img/senha.png' %}">
+                    <input type="password" name="password" id="password-input" placeholder="Senha">
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+
+
+            <a href="{% url 'register' %}"><button>Registrar</button></a>
+
+        </div>
+    </div>
+</body>
+</html>
