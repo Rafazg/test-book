@@ -47,7 +47,6 @@ pipwin==0.5.2
 platformdirs==3.10.0
 prompt-toolkit==3.0.39
 psutil==5.9.5
-psycopg2 @ file:///C:/Users/Deninho/pipwin/psycopg2-2.9.3-cp311-cp311-win_amd64.whl#sha256=3dcaaed48013e5f67a7de2bab9d9aa42b51cbc504237aaa6fbc74bff794e923f
 psycopg2-binary==2.9.9
 pure-eval==0.2.2
 PyAutoGUI==0.9.54
